@@ -1,0 +1,365 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+body {
+  font-family: Arial;
+  /* Light background for contrast */
+}
+.banner{
+  display: inline;
+}
+
+/* post */
+#postsContainer {
+  margin-top: 3rem;
+  text-align: center;
+  /* height: 600px; */
+}
+#postsGrid {
+  display: flex;
+  height: 600px;
+  width: 400px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px; /* items ke beech mein space */
+  margin: 0 auto; /* center karne ke liye */
+  max-width: 1200px; /* max width for the grid */
+  padding: 16px; /* padding for the grid */
+}
+
+.post {
+  flex: 1 1 300px; /* Minimum width 300px, flexible */
+  max-width: 100%; /* container ke size ke according */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff; /* Background color for visibility */
+}
+
+.post img {
+  width: 100%; /* Image ko responsive banane ke liye */
+  height: auto; /* Aspect ratio maintain karne ke liye */
+}
+
+.post:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.post p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.post .author {
+  font-weight: bold;
+  
+}
+
+.post .timestamp {
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8em;
+  }
+
+  .main-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .form input {
+    font-size: 1em;
+  }
+
+  .form .btn {
+    font-size: 1em;
+    padding: 10px 15px;
+  }
+
+  #postsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .post {
+    padding: 10px;
+  }
+}
+/* changing css */
+
+
+.first {
+  width: 100%;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between; /* Align items to the ends */
+  align-items: center; /* Center items vertically */
+  padding: 10px 20px; /* Add some padding */
+  background-color: #f8f9fa; /* Background color for visibility */
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  margin-right: 10px; /* Space between image and name */
+}
+
+.nav {
+  margin-left: 80px; /* Space between nav items */
+  text-decoration: none; /* Remove underline */
+  color: #000; /* Text color */
+}
+
+.nav:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .banner {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align items to the start */
+  }
+
+  .nav {
+      margin: 5px 0; /* Space between nav items vertically */
+  }
+
+  .profile {
+      margin-bottom: 10px; /* Space below the profile section */
+  }
+
+  .profile-pic {
+      margin-right: 0; /* Remove right margin on mobile */
+  }
+}
+
+/* Position the profile image to the right */
+@media (min-width: 769px) {
+  .profile {
+      margin-left: auto; /* Push profile to the right */
+  }
+}
+
+
+
+
+/* endchanging */
+
+
+.nav{
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+  padding-bottom: 20px;
+  
+  padding-left: 14px;
+}
+i{
+  margin-right: 5px;
+}
+
+
+
+
+.content {
+  flex: 1 1 400px; /* Flex basis for content */
+ margin-top: 60px;
+
+
+}
+
+/* postwork */
+.post-container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info img {
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.posts {
+  margin-top: 20px;
+}
+
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+
+
+.content {
+  /* Black border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: rgb(236, 233, 233);/* Background color of the div */
+  padding: 20px; /* Padding inside the div */
+  margin: 20px; /* Margin around the div */
+  max-width: 600px; /* Maximum width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.content:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+#title{
+  width: 330px;
+  padding-bottom: 14px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+}
+#description{
+  padding-bottom:160px ;
+  width: 330px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: none;
+ 
+}
+#post{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  width: 290px;
+  margin-left: 10px;
+}
+#edtBtn{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+#dltBtn{
+
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.card{
+  align-items: center;
+  background-color: rgb(236, 233, 233);
+  width: 320px;
+
+}
+#showImages img{
+  width: 280px;
+  align-items: center;
+}
+.card-img-top {
+  object-fit: cover; /* Ensures the image covers the card area */
+  height: 200px; /* Fixed height for uniformity */
+}
+/* responsive post */
+.second {
+  max-width: 800px; /* Limit the width for larger screens */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add some padding */
+}
+
+#addPostSection {
+  margin-bottom: 20px; /* Space below the add post section */
+  padding: 15px;
+  border: 1px solid #ccc; /* Optional: Add border for visibility */
+  border-radius: 5px; /* Optional: Rounded corners */
+  background-color: #f8f9fa; /* Optional: Background color */
+}
+
+.form {
+  display: flex;
+  flex-direction: column; /* Stack inputs vertically */
+}
+
+.form input, .form button {
+  margin: 10px 0; /* Space between inputs and button */
+  padding: 10px; /* Padding inside inputs */
+  font-size: 16px; /* Font size for better accessibility */
+}
+
+#postsContainer {
+  padding: 15px;
+  border: 1px solid #ccc; /* Optional: Add border for visibility */
+  border-radius: 5px; /* Optional: Rounded corners */
+  background-color: #f8f9fa; /* Optional: Background color */
+}
+h2{
+  font-weight: bolder;
+}
+#postsGrid {
+  display: flex;
+  flex-direction: column; /* Stack posts vertically */
+}
+.btn{
+  background-color: black;
+  color: white;
+}
+.btn:hover{
+  color: white;
+  background-color: rgb(66, 137, 161);
+}
+.post {
+  margin: 10px 0; /* Space between posts */
+  padding: 10px;
+  border: 1px solid #ddd; /* Optional: Border for posts */
+  border-radius: 5px; /* Optional: Rounded corners */
+  background-color: #fff;
+   /* Optional: Background color for posts */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .form input, .form button {
+      font-size: 14px; /* Smaller font size on mobile */
+  }
+
+  #postsGrid {
+      flex-direction: column; /* Ensure posts stack vertically */
+  }
+
+  .post {
+      font-size: 14px; /* Smaller font size for posts on mobile */
+  }
+}
+#emoji-button {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#emoji-display {
+  font-size: 48px;
+  margin-top: 10px;
+}
